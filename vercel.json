@@ -1,18 +1,13 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "src/main.ts", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "src/main.ts" }
-  ],
   "functions": {
     "src/main.ts": {
+      "runtime": "nodejs18.x",
       "maxDuration": 60,
       "memory": 1024
     }
   },
-  "env": {
-    "NODE_ENV": "production"
-  }
+  "routes": [
+    { "src": "/(.*)", "dest": "src/main.ts" }
+  ]
 }

@@ -1,5 +1,6 @@
 // Import this first from sentry instrument!
-import '@utils/instrumentSentry';
+import instrumentSentry from './utils/instrumentSentry';
+
 
 // Now import other modules
 import { ProviderFiles } from '@api/provider/sessions';
